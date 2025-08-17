@@ -1,0 +1,60 @@
+{
+  "_comment": "身份证照片生成系统配置文件 - 包含所有核心功能的配置参数",
+  
+  "photo_cropping": {
+    "_comment": "照片裁剪模块配置",
+    "output_dimensions": {
+      "_comment": "裁剪后照片的尺寸（像素）",
+      "width": 360,
+      "height": 450
+    },
+    "face_detection": {
+      "_comment": "人脸检测相关配置",
+      "confidence_threshold": 0.5
+    },
+    "cropping_parameters": {
+      "_comment": "裁剪算法参数 - 控制头部比例、边距等",
+      "target_head_ratio": 0.75,
+      "target_top_margin": 0.08,
+      "chin_extra_ratio": 0.12,
+      "hair_ratio": {
+        "base": 0.25,
+        "min": 0.15,
+        "max": 0.35,
+        "small_face_multiplier": 1.1,
+        "large_face_multiplier": 0.6,
+        "top_position_multiplier": 0.6,
+        "bottom_position_multiplier": 1.0
+      }
+    }
+  },
+  
+  "id_card_generation": {
+    "_comment": "身份证生成模块配置",
+    "photo_position": {
+      "_comment": "照片在身份证上的位置和尺寸",
+      "x": 175,
+      "y": 659,
+      "width": 288,
+      "height": 350
+    },
+    "text_position": {
+      "_comment": "姓名文字在身份证上的位置和样式",
+      "name_origin": [175, 1040],
+      "max_width": 450,
+      "font_size": 42,
+      "line_spacing": 16
+    },
+    "font": {
+      "_comment": "字体配置",
+      "color": [17, 26, 65]
+    }
+  },
+  
+  "name_conversion": {
+    "_comment": "姓名转换配置（中文转拼音）",
+    "pinyin_style": "normal",
+    "name_format": "givenname_surname",
+    "fallback_to_original": true
+  }
+} 
